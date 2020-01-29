@@ -140,8 +140,7 @@ class DashboardViewController: UIViewController {
             db.collection("movies").addDocument(data: [
                 "name": txtMovieName.text!,
                 "director":txtDirector.text!,
-                "rating": txtRating.text! ,
-                "image":"https://i.ytimg.com/vi/Z1i8kbjsvHw/maxresdefault.jpg"
+                "rating": txtRating.text! 
                 ])
             { err in
                 if let err = err {
@@ -153,6 +152,8 @@ class DashboardViewController: UIViewController {
                     self.clearFields()
                     
                     self.btnAddData.loadingIndicator(show: false)
+                    
+                    alert.showAlert(title: "Success", message: "You're Successfully Added this movie!!", buttonText: "Thank you")
                 }
             }
             
@@ -169,6 +170,12 @@ class DashboardViewController: UIViewController {
     func addCustomStylesToView() {
         
         self.navigationController?.navigationBar.isHidden = true
+        
+        txtMovieName.roundCorners([.topLeft,.topRight], radius: 10)
+        
+        txtDirector.roundCorners([.topLeft,.topRight], radius: 10)
+        
+        txtRating.roundCorners([.topLeft,.topRight], radius: 10)
         
         txtMovieName.setLeftPaddingPoints(8)
         

@@ -1,5 +1,6 @@
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class StarterViewController: UIViewController {
     
@@ -23,7 +24,6 @@ class StarterViewController: UIViewController {
             self.performSegue(withIdentifier: "dashboardView", sender: self)
             
         } else {
-            
             print("User session failed")
         }
     }
