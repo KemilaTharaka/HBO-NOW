@@ -1,5 +1,7 @@
 import UIKit
 import FirebaseAuth
+import GoogleSignIn
+
 
 
 class UIRegisterViewController: UIViewController {
@@ -21,7 +23,28 @@ class UIRegisterViewController: UIViewController {
         super.viewDidLoad()
         
         self.addStylesToRegister()
+
     }
+    
+    @IBAction func GoogleSignInButton(_ sender: Any){
+        GIDSignIn.sharedInstance().delegate=self as! GIDSignInDelegate
+        GIDSignIn.sharedInstance().uiDelegate=self as! GIDSignInUIDelegate
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    func signInWillDispatch(_ signIn: GIDSignIn!, error: Error!) {
+    }
+    
+    func signIn(_ signIn: GIDSignIn!,
+                presentViewController viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func signIn(_ signIn: GIDSignIn!,
+                dismissViewController viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func btnRegister(_ sender: Any) {
         
@@ -54,6 +77,7 @@ class UIRegisterViewController: UIViewController {
         }
         
     }
+    
     func addStylesToRegister()  {
         
         self.navigationController?.navigationBar.tintColor = UIColor.white

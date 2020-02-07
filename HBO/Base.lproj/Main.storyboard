@@ -187,6 +187,14 @@ and conditions of HBO.</string>
                                     <segue destination="Mvt-ws-kwq" kind="show" id="kzs-sI-8Bi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7e-4F-jvE">
+                                <rect key="frame" x="157" y="221" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Google Sign In"/>
+                                <connections>
+                                    <action selector="GoogleSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1cK-6A-ABF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -240,6 +248,7 @@ and conditions of HBO.</string>
                     </view>
                     <navigationItem key="navigationItem" title="REGISTER FOR NOW HBO NOW" largeTitleDisplayMode="never" id="56P-Io-Edd"/>
                     <connections>
+                        <outlet property="googleSignIn" destination="Q7e-4F-jvE" id="RlN-GG-4qu"/>
                         <outlet property="txtCpass" destination="D1T-On-1B5" id="40I-Jx-anx"/>
                         <outlet property="txtEmail" destination="ieh-BB-nyd" id="ekz-cr-5o2"/>
                         <outlet property="txtFName" destination="9kH-ix-tQS" id="AJx-Um-uT9"/>
@@ -250,7 +259,7 @@ and conditions of HBO.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136" y="772"/>
+            <point key="canvasLocation" x="-136.23188405797103" y="771.42857142857144"/>
         </scene>
         <!--SIGN IN-->
         <scene sceneID="Cvz-pF-W4G">
@@ -662,6 +671,42 @@ and conditions of HBO.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CED-qD-S90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-884" y="-129"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="vG7-KU-8oV">
+            <objects>
+                <tableViewController id="jAa-Xg-mPU" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ddj-1t-z5r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="x8q-8I-1bm">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x8q-8I-1bm" id="FPC-KM-Efs">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jAa-Xg-mPU" id="bqG-Fd-DFo"/>
+                            <outlet property="delegate" destination="jAa-Xg-mPU" id="khw-fs-Vjp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ap-7e-iM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="-88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oOv-ed-OQJ">
+            <objects>
+                <viewController id="uOG-nH-WE4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efu-Tk-RKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="-788"/>
         </scene>
     </scenes>
     <resources>

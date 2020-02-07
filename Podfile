@@ -10,8 +10,7 @@ target 'HBO' do
   pod 'Firebase/Auth' 
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
-
-  
+  pod 'GoogleSignIn', '~> 4.1.1'
 
   target 'HBOTests' do
     inherit! :search_paths

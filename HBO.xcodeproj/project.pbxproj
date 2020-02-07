@@ -15,6 +15,7 @@
 		0E25450A23D2CD7A0059AC7D /* ActivityIndicatorCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25450923D2CD7A0059AC7D /* ActivityIndicatorCustom.swift */; };
 		0E25450D23D2CF2C0059AC7D /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25450C23D2CF2C0059AC7D /* AlertDialog.swift */; };
 		0E25450F23D2D0A00059AC7D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25450E23D2D0A00059AC7D /* Validator.swift */; };
+		0ED3DDC423E4474A00395E86 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3DDC323E4474A00395E86 /* GoogleSignInButton.swift */; };
 		0F22967A23C3764B00A51BBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22967923C3764B00A51BBB /* AppDelegate.swift */; };
 		0F22967C23C3764B00A51BBB /* UIRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22967B23C3764B00A51BBB /* UIRegisterViewController.swift */; };
 		0F22967F23C3764B00A51BBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F22967D23C3764B00A51BBB /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		0E25450923D2CD7A0059AC7D /* ActivityIndicatorCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorCustom.swift; sourceTree = "<group>"; };
 		0E25450C23D2CF2C0059AC7D /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		0E25450E23D2D0A00059AC7D /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0ED3DDC323E4474A00395E86 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		0F22967623C3764B00A51BBB /* HBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F22967923C3764B00A51BBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F22967B23C3764B00A51BBB /* UIRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRegisterViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				0F2296A723C381AC00A51BBB /* btnCustom.swift */,
 				0F2296B023C3AD7E00A51BBB /* CheckBoxButton.swift */,
+				0ED3DDC323E4474A00395E86 /* GoogleSignInButton.swift */,
 			);
 			path = UICustomStyles;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				0F22967323C3764B00A51BBB /* Frameworks */,
 				0F22967423C3764B00A51BBB /* Resources */,
 				588F030AD2E9EAB3BA639118 /* [CP] Embed Pods Frameworks */,
+				66B2241C3F2D294A253656A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +287,7 @@
 				0F22969223C3764C00A51BBB /* Frameworks */,
 				0F22969323C3764C00A51BBB /* Resources */,
 				73EAC05B0665B227DD60A396 /* [CP] Embed Pods Frameworks */,
+				DD28C61A40B121D00555AAD1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,6 +411,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HBO/Pods-HBO-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		66B2241C3F2D294A253656A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HBO/Pods-HBO-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HBO/Pods-HBO-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HBO/Pods-HBO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		73EAC05B0665B227DD60A396 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +465,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD28C61A40B121D00555AAD1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HBO-HBOUITests/Pods-HBO-HBOUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HBO-HBOUITests/Pods-HBO-HBOUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HBO-HBOUITests/Pods-HBO-HBOUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E604C19A28C24A1777B7D64D /* [CP] Check Pods Manifest.lock */ = {
@@ -484,6 +523,7 @@
 				0F22967A23C3764B00A51BBB /* AppDelegate.swift in Sources */,
 				0F2296B123C3AD7E00A51BBB /* CheckBoxButton.swift in Sources */,
 				0E25450A23D2CD7A0059AC7D /* ActivityIndicatorCustom.swift in Sources */,
+				0ED3DDC423E4474A00395E86 /* GoogleSignInButton.swift in Sources */,
 				0F2296A823C381AC00A51BBB /* btnCustom.swift in Sources */,
 				0E25450623D2CBDD0059AC7D /* DashboardViewController.swift in Sources */,
 			);

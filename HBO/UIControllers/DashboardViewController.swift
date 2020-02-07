@@ -171,11 +171,11 @@ class DashboardViewController: UIViewController {
         
         self.navigationController?.navigationBar.isHidden = true
         
-        txtMovieName.roundCorners([.topLeft,.topRight], radius: 10)
+        txtMovieName.roundCorners([.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 10)
         
-        txtDirector.roundCorners([.topLeft,.topRight], radius: 10)
+        txtDirector.roundCorners([.topLeft,.topRight,.bottomRight,.bottomLeft], radius: 10)
         
-        txtRating.roundCorners([.topLeft,.topRight], radius: 10)
+        txtRating.roundCorners([.topLeft,.topRight,.bottomRight,.bottomLeft], radius: 10)
         
         txtMovieName.setLeftPaddingPoints(8)
         
